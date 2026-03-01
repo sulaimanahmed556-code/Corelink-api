@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Result</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f6f8fb;
+        color: #111827;
+      }
+      .card {
+        max-width: 760px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid #dbe2ea;
+        border-radius: 12px;
+        padding: 18px;
+      }
+      .row {
+        margin-bottom: 10px;
+      }
+      code {
+        background: #f3f6fa;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      .secret {
+        white-space: pre-wrap;
+        word-break: break-word;
+        background: #f3f6fa;
+        border: 1px solid #dbe2ea;
+        border-radius: 8px;
+        padding: 10px;
+      }
+      a {
+        color: #0f7bff;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <h1>Subscription Created</h1>
+      <p class="row"><strong>Status:</strong> {{ result.status }}</p>
+      <p class="row"><strong>Provider:</strong> {{ result.provider }}</p>
+      {% if result.subscription_id %}
+      <p class="row"><strong>Subscription ID:</strong> <code>{{ result.subscription_id }}</code></p>
+      {% endif %}
+      <p class="row"><strong>Message:</strong> {{ result.message }}</p>
+
+      {% if result.client_secret %}
+      <p class="row"><strong>Stripe Client Secret:</strong></p>
+      <div class="secret">{{ result.client_secret }}</div>
+      {% endif %}
+
+      {% if result.payment_url %}
+      <p class="row">
+        Continue:
+        <a href="{{ result.payment_url }}">{{ result.payment_url }}</a>
+      </p>
+      {% endif %}
+
+      <p class="row">
+        <a href="{{ checkoutPath }}?group_id={{ groupId }}">Back to plans</a>
+      </p>
+    </section>
+  </body>
+</html>
+

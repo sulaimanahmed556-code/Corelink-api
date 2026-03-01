@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CORELINK Payments</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --text: #101418;
+        --muted: #4f5d6b;
+        --line: #d8dee7;
+        --brand: #0f7bff;
+        --ok: #0f9d58;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at top right, #e7f0ff, var(--bg) 45%);
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 22px;
+      }
+      .title {
+        margin: 0;
+      }
+      .hint {
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .group {
+        margin-top: 8px;
+        padding: 10px 12px;
+        background: #f1f5fb;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      .grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+      .plan {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px;
+        cursor: pointer;
+      }
+      .plan:has(input:checked) {
+        border-color: var(--brand);
+        box-shadow: 0 0 0 2px rgba(15, 123, 255, 0.12);
+      }
+      .plan input {
+        margin-right: 6px;
+      }
+      .price {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 8px 0;
+      }
+      .providers {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .tag {
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        border: 1px solid #c7d6ed;
+        background: #f4f8ff;
+      }
+      form {
+        margin-top: 18px;
+      }
+      .fields {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 14px;
+      }
+      input,
+      select {
+        border: 1px solid #bfcbd9;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+      .submit {
+        margin-top: 14px;
+        border: 0;
+        border-radius: 10px;
+        padding: 12px 16px;
+        background: var(--brand);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .submit:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+      }
+      .note {
+        margin-top: 10px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .empty {
+        margin-top: 16px;
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 14px;
+      }
+      .ok {
+        color: var(--ok);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1 class="title">CORELINK Plan Checkout</h1>
+      <p class="hint">Choose a plan and payment provider, then continue to subscription.</p>
+      <div class="group">Group ID: <code>{{ groupId }}</code></div>
+
+      {% if not plans %}
+      <section class="empty">
+        <p>No active plans are available right now.</p>
+        <p class="hint">Ask an admin to create and activate plans first.</p>
+      </section>
+      {% else %}
+      <form id="checkoutForm" method="post" action="{{ checkoutPath }}/create-subscription">
+        <input type="hidden" name="group_id" value="{{ groupId }}" />
+        <input type="hidden" name="plan_db_id" id="planDbId" />
+
+        <section class="grid">
+          {% for plan in plans %}
+          <label class="plan">
+            <div>
+              <input type="radio" name="plan_picker" value="{{ plan.id }}" />
+              <strong>{{ plan.name }}</strong>
+            </div>
+            <div class="price">{{ plan.currency }} {{ plan.price }}</div>
+            {% if plan.description %}
+            <div class="hint">{{ plan.description }}</div>
+            {% endif %}
+            <div class="providers">
+              {% if plan.stripe_plan_id %}<span class="tag">Stripe</span>{% endif %}
+              {% if plan.paypal_plan_id %}<span class="tag">PayPal</span>{% endif %}
+              {% if plan.paystack_plan_code %}<span class="tag">Paystack</span>{% endif %}
+            </div>
+          </label>
+          {% endfor %}
+        </section>
+
+        <section class="fields">
+          <label>
+            Payment Provider
+            <select id="providerSelect" name="provider" required disabled>
+              <option value="">Select a plan first</option>
+            </select>
+          </label>
+          <label>
+            Email
+            <input id="emailInput" type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Customer Name
+            <input type="text" name="customer_name" placeholder="Full name" />
+          </label>
+          <label>
+            First Name
+            <input type="text" name="first_name" placeholder="First name" />
+          </label>
+          <label>
+            Last Name
+            <input type="text" name="last_name" placeholder="Last name" />
+          </label>
+          <label>
+            Phone
+            <input type="text" name="phone" placeholder="+123..." />
+          </label>
+        </section>
+
+        <button class="submit" id="submitBtn" type="submit" disabled>
+          Continue To Payment
+        </button>
+        <p class="note">
+          You will be redirected to Stripe, Paystack, or PayPal based on provider selection.
+          <span class="ok">Only active plans are shown.</span>
+        </p>
+      </form>
+
+      <script id="plans-data" type="application/json">{{ plans_json|safe }}</script>
+      <script>
+        const plans = JSON.parse(document.getElementById("plans-data").textContent);
+        const radios = Array.from(document.querySelectorAll("input[name='plan_picker']"));
+        const planDbId = document.getElementById("planDbId");
+        const providerSelect = document.getElementById("providerSelect");
+        const submitBtn = document.getElementById("submitBtn");
+        const emailInput = document.getElementById("emailInput");
+        let lastPlanId = "";
+
+        const providerMap = [
+          { key: "stripe_plan_id", value: "stripe", label: "Stripe" },
+          { key: "paypal_plan_id", value: "paypal", label: "PayPal" },
+          { key: "paystack_plan_code", value: "paystack", label: "Paystack" },
+        ];
+
+        function selectedPlan() {
+          const checked = radios.find((radio) => radio.checked);
+          if (!checked) {
+            return null;
+          }
+          return plans.find((plan) => String(plan.id) === checked.value) || null;
+        }
+
+        function setProviderOptions(plan) {
+          const previousProvider = providerSelect.value;
+          providerSelect.innerHTML = "";
+          if (!plan) {
+            providerSelect.disabled = true;
+            providerSelect.innerHTML = "<option value=''>Select a plan first</option>";
+            return;
+          }
+
+          const supported = providerMap.filter((p) => plan[p.key]);
+          if (!supported.length) {
+            providerSelect.disabled = true;
+            providerSelect.innerHTML = "<option value=''>No provider configured</option>";
+            return;
+          }
+
+          providerSelect.disabled = false;
+          providerSelect.append(new Option("Select provider", ""));
+          for (const item of supported) {
+            providerSelect.append(new Option(item.label, item.value));
+          }
+
+          if (supported.some((item) => item.value === previousProvider)) {
+            providerSelect.value = previousProvider;
+          }
+        }
+
+        function updatePlanState() {
+          const plan = selectedPlan();
+          planDbId.value = plan ? String(plan.id) : "";
+          if (planDbId.value !== lastPlanId) {
+            setProviderOptions(plan);
+            lastPlanId = planDbId.value;
+          }
+        }
+
+        function updateFormState() {
+          updatePlanState();
+          const isReady =
+            planDbId.value &&
+            providerSelect.value &&
+            emailInput.value &&
+            emailInput.checkValidity();
+
+          submitBtn.disabled = !isReady;
+        }
+
+        radios.forEach((radio) => {
+          radio.addEventListener("change", updateFormState);
+        });
+        providerSelect.addEventListener("change", updateFormState);
+        emailInput.addEventListener("input", updateFormState);
+        updateFormState();
+      </script>
+      {% endif %}
+    </main>
+  </body>
+</html>
+

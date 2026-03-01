@@ -1,0 +1,72 @@
+2026-02-18 06:45:03 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-18 06:45:03 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-18 06:45:03 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-18 06:45:03 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-18 07:09:41 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-18 07:09:41 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-18 07:09:41 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-18 07:09:41 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-18 07:09:41 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-18 07:09:41 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-18 07:09:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-18 07:09:41 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-18 07:09:41 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-18 07:12:24 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-18 07:12:24 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-18 07:12:24 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-18 07:12:24 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-18 07:13:19 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-18 07:13:19 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-18 07:13:19 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-18 07:13:19 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-18 07:13:20 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-18 07:13:20 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-18 07:13:20 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-18 07:13:20 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-18 07:13:20 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-18 07:16:26 | DEBUG    | app.middleware.webhook_security:dispatch:98 - Valid webhook request: 91.108.5.71, path: /api/v1/webhook/telegram, method: POST
+2026-02-18 07:16:26 | DEBUG    | app.middleware.webhook_security:dispatch:98 - Valid webhook request: 91.108.5.71, path: /api/v1/webhook/telegram, method: POST
+2026-02-18 07:16:26 | DEBUG    | app.api.routes.webhook:telegram_webhook:277 - Valid Telegram webhook: IP=91.108.5.71, update_id=815109225, rate_limit=1/30
+2026-02-18 07:16:26 | DEBUG    | app.api.routes.webhook:telegram_webhook:277 - Valid Telegram webhook: IP=91.108.5.71, update_id=815109225, rate_limit=1/30

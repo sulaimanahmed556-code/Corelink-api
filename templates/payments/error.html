@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Error</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #fef2f2;
+        color: #7f1d1d;
+      }
+      .card {
+        max-width: 760px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid #fecaca;
+        border-radius: 12px;
+        padding: 18px;
+      }
+      a {
+        color: #b91c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <h1>Payment Flow Error</h1>
+      <p>{{ message }}</p>
+      {% if groupId %}
+      <p><a href="{{ checkoutPath }}?group_id={{ groupId }}">Back to plans</a></p>
+      {% endif %}
+    </section>
+  </body>
+</html>
+

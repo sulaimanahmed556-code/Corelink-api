@@ -1,0 +1,402 @@
+2026-02-25 22:31:22 | ERROR    | app.dependencies:get_redis_client:50 - Failed to connect to Redis: Error Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
+2026-02-25 22:31:22 | ERROR    | app.dependencies:get_redis_client:50 - Failed to connect to Redis: Error Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
+2026-02-25 22:31:22 | ERROR    | app.dependencies:init_redis:104 - Failed to initialize Redis: Error Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
+2026-02-25 22:31:22 | ERROR    | app.dependencies:init_redis:104 - Failed to initialize Redis: Error Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
+2026-02-25 22:33:44 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 22:33:44 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 22:33:44 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 22:33:44 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 22:33:45 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 22:33:45 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 22:33:45 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 22:33:45 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 22:33:45 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 22:58:04 | ERROR    | app.api.routes.user_management:create_admin:149 - Error creating admin: bcrypt: no backends available -- recommend you install one (e.g. 'pip install bcrypt')
+2026-02-25 22:58:04 | ERROR    | app.api.routes.user_management:create_admin:149 - Error creating admin: bcrypt: no backends available -- recommend you install one (e.g. 'pip install bcrypt')
+2026-02-25 22:58:25 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 22:58:25 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 22:58:25 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 22:58:25 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 22:59:46 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 22:59:46 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 22:59:46 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 22:59:46 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 22:59:47 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 22:59:47 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 22:59:47 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 22:59:47 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 22:59:47 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 22:59:51 | ERROR    | app.api.routes.user_management:create_admin:149 - Error creating admin: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2026-02-25 22:59:51 | ERROR    | app.api.routes.user_management:create_admin:149 - Error creating admin: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2026-02-25 23:01:42 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:01:42 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:01:42 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:01:42 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:02:40 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:02:40 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:02:40 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:02:40 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:02:41 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:02:41 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:02:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:02:41 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:02:41 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:02:45 | INFO     | app.services.admin_service:create_admin_account:88 - Admin account created: admin@corelink.com (super_admin)
+2026-02-25 23:02:45 | INFO     | app.services.admin_service:create_admin_account:88 - Admin account created: admin@corelink.com (super_admin)
+2026-02-25 23:11:10 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:11:10 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:11:10 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:11:10 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:11:40 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:11:40 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:11:40 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:11:40 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:11:41 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:11:41 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:11:41 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:11:41 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:11:41 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:11:56 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:11:56 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:11:56 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:11:56 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:12:32 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:12:32 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:12:32 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:12:32 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:12:33 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:12:33 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:12:33 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:12:33 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:12:33 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:13:47 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:13:47 | INFO     | app.tasks.scheduler:stop_scheduler:176 - Task scheduler stopped successfully
+2026-02-25 23:13:47 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:13:47 | INFO     | app.dependencies:close_redis:126 - Redis connections closed
+2026-02-25 23:14:15 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:14:15 | INFO     | app.dependencies:get_redis_client:47 - Redis client initialized successfully
+2026-02-25 23:14:15 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:14:15 | INFO     | app.dependencies:init_redis:102 - Redis connection initialized
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:105 - Scheduled task: daily_aggregation (1:00 AM UTC daily)
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:schedule_recurring_tasks:116 - Scheduled task: weekly_reports (0 9 * * MON)
+2026-02-25 23:14:16 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:14:16 | SUCCESS  | app.tasks.scheduler:start_scheduler:145 - Task scheduler started successfully
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:start_scheduler:146 - Scheduled jobs: 2
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Daily Analytics Aggregation (ID: daily_aggregation)
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:14:16 | INFO     | app.tasks.scheduler:start_scheduler:150 -   - Weekly Group Reports (ID: weekly_reports)
+2026-02-25 23:14:16 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:14:16 | INFO     | main:lifespan:100 - Security Configuration:
+  - Webhook validation: ENABLED
+  - HTTPS enforcement: DISABLED (dev)
+  - Rate limiting: ENABLED (nginx)
+  - Failed attempt tracking: ENABLED
+  - Max failed attempts: 10
+  - Block duration: 15 minutes
+2026-02-25 23:17:41 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:41 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:42 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:42 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:56 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:56 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:58 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:17:58 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:18:34 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:18:34 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:18:35 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:18:35 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:50 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:50 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:51 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:51 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:52 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:52 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:53 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:19:53 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:20:46 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:20:46 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:20:48 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:20:48 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:25 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:25 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:26 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:26 | ERROR    | app.api.routes.plans:list_plans:249 - Error listing plans: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column plans.features does not exist
+[SQL: SELECT plans.id, plans.name, plans.description, plans.price, plans.currency, plans.features, plans.interval, plans.interval_count, plans.stripe_plan_id, plans.paypal_plan_id, plans.paystack_plan_code, plans.is_active, plans.created_at, plans.updated_at 
+FROM plans ORDER BY plans.price ASC, plans.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (50, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:27 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:27 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:28 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-25 23:25:28 | ERROR    | app.api.routes.subscriptions:list_subscriptions:79 - Error listing subscriptions: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column subscriptions.plan_id does not exist
+[SQL: SELECT subscriptions.id, subscriptions.group_id, subscriptions.plan_id, subscriptions.provider, subscriptions.status, subscriptions.provider_subscription_id, subscriptions.subscriber_email, subscriptions.current_period_start, subscriptions.current_period_end, subscriptions.created_at, subscriptions.updated_at 
+FROM subscriptions ORDER BY subscriptions.created_at DESC 
+ LIMIT $1::INTEGER OFFSET $2::INTEGER]
+[parameters: (100, 0)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
