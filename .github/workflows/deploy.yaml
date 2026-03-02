@@ -13,7 +13,7 @@ env:
   DEPLOY_DIR: /var/corelink/backend
   GIT_REPO: git@github.com:sulaimanahmed556-code/Corelink-api.git
   PRIV_KEY: ${{secrets.CORELINK_SSH_PRIV_KEY}}
-  DOMAIN_NAME: app.corelink.com
+  DOMAIN_NAME: app.coreliink.com
 
 jobs:
   deploy:
