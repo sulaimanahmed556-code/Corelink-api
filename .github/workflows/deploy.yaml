@@ -64,7 +64,7 @@ jobs:
             fi
 
             pm2 delete corelink || true
-            pm2 start "venv/bin/python main.py" --name corelink
+            pm2 start /var/corelink/backend/venv/bin/python -- main.py --name corelink
             pm2 save
 
       - name: Setup Uvicorn, Nginx & SSL
