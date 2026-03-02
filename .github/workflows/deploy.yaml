@@ -54,7 +54,7 @@ jobs:
             fi
 
             #clone code from git 
-            cd ${{env.DEPLOY_DIR}} && python -m venv venv && source venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
+            cd ${{env.DEPLOY_DIR}} && python3 -m venv venv && source venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
             
             echo "Restarting PM2..."
 
@@ -64,7 +64,7 @@ jobs:
             fi
 
             pm2 delete corelink || true
-            pm2 start "python main.py" --name corelink
+            pm2 start "venv/bin/python main.py" --name corelink
             pm2 save
 
       - name: Setup Uvicorn, Nginx & SSL
