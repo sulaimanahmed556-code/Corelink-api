@@ -55,7 +55,7 @@ jobs:
 
             #clone code from git 
             cd ${{env.DEPLOY_DIR}} && python3 -m venv venv && source venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
-            
+
             echo "Restarting PM2..."
 
             if ! command -v pm2 &> /dev/null
@@ -64,57 +64,56 @@ jobs:
             fi
 
             pm2 delete corelink || true
-            pm2 start "python main.py" --name corelink
+            echo "venv/bin/activate && python main.py" >> start.sh
+            pm2 start "${{env.DEPLOY_DIR}}/start.sh" --name corelink
             pm2 save
 
       - name: Setup Uvicorn, Nginx & SSL
         run: |
-            ssh ${{ env.VPS_USER }}@${{ env.VPS_HOST }} bash << 'EOF'
-            set -e
+          ssh ${{ env.VPS_USER }}@${{ env.VPS_HOST }} bash << 'EOF'
+          set -e
 
-            DEPLOY_DIR=${{ env.DEPLOY_DIR }}
-            DOMAIN=${{ env.DOMAIN_NAME }}
+          DEPLOY_DIR=${{ env.DEPLOY_DIR }}
+          DOMAIN=${{ env.DOMAIN_NAME }}
 
-            cd $DEPLOY_DIR
+          cd $DEPLOY_DIR
 
-            echo "Installing Nginx if missing..."
-            if ! command -v nginx >/dev/null 2>&1; then
-                apt update && apt install -y nginx
-            fi
+          echo "Installing Nginx if missing..."
+          if ! command -v nginx >/dev/null 2>&1; then
+              apt update && apt install -y nginx
+          fi
 
-            echo "Configuring Nginx reverse proxy..."
+          echo "Configuring Nginx reverse proxy..."
 
-            NGINX_CONF="/etc/nginx/sites-available/$DOMAIN"
+          NGINX_CONF="/etc/nginx/sites-available/$DOMAIN"
 
-            cat > "$NGINX_CONF" << EOF_NGINX
-            server {
-                listen 80;
-                server_name $DOMAIN;
+          cat > "$NGINX_CONF" << EOF_NGINX
+          server {
+              listen 80;
+              server_name $DOMAIN;
 
-                location / {
-                    proxy_pass http://127.0.0.1:8000;
-                    proxy_set_header Host \$host;
-                    proxy_set_header X-Real-IP \$remote_addr;
-                    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-                    proxy_set_header X-Forwarded-Proto \$scheme;
-                }
-            }
-            EOF_NGINX
+              location / {
+                  proxy_pass http://127.0.0.1:8000;
+                  proxy_set_header Host \$host;
+                  proxy_set_header X-Real-IP \$remote_addr;
+                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto \$scheme;
+              }
+          }
+          EOF_NGINX
 
-            ln -sf "$NGINX_CONF" /etc/nginx/sites-enabled/
-            nginx -t
-            systemctl reload nginx
+          ln -sf "$NGINX_CONF" /etc/nginx/sites-enabled/
+          nginx -t
+          systemctl reload nginx
 
-            echo "Installing Certbot if missing..."
-            if ! command -v certbot >/dev/null 2>&1; then
-                apt install -y certbot python3-certbot-nginx
-            fi
+          echo "Installing Certbot if missing..."
+          if ! command -v certbot >/dev/null 2>&1; then
+              apt install -y certbot python3-certbot-nginx
+          fi
 
-            echo "Obtaining SSL certificate..."
-            certbot --nginx -d $DOMAIN --non-interactive --agree-tos -m admin@$DOMAIN || true
+          echo "Obtaining SSL certificate..."
+          certbot --nginx -d $DOMAIN --non-interactive --agree-tos -m admin@$DOMAIN || true
 
-            echo "Deployment complete."
+          echo "Deployment complete."
 
-            EOF
-    
-            
+          EOF
