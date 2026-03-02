@@ -32,7 +32,7 @@ jobs:
 
       - name: Make Deply DEPLOY_DIR
         run: |
-          ssh ${{env.VPS_USER}}@${{env.VPS_HOST}} "mkdir -p ${{env.DEPLOY_DIR}} && cd ${{env.DEPLOY_DIR}} && find . -mindepth 1 ! -name '.env' -exec rm -rf {} + && GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=no' git clone ${{ env.GIT_REPO }} ."
+          ssh ${{env.VPS_USER}}@${{env.VPS_HOST}} "mkdir -p ${{env.DEPLOY_DIR}} && cd ${{env.DEPLOY_DIR}} && mv .env /tmp/.env.backup rm -rf ./* + && GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=no' git clone ${{ env.GIT_REPO }} . && mv /tmp/.env.backup .env"
 
       - name: Ensure Python is installed
         uses: appleboy/ssh-action@v1.0.3
