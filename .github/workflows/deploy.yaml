@@ -64,8 +64,7 @@ jobs:
             fi
 
             pm2 delete corelink || true
-            echo "cd ${{env.DEPLOY_DIR}} && ./venv/bin/activate && python main.py" >> start.sh
-            pm2 start "${{env.DEPLOY_DIR}}/start.sh" --name corelink
+            pm2 start "${{env.DEPLOY_DIR}}/venv/bin/python" --name corelink -- "${{env.DEPLOY_DIR}}/main.py"
             pm2 save
 
       - name: Setup Uvicorn, Nginx & SSL
